@@ -1,8 +1,25 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	x:Class="TurtleWallet.Views.WalletHome">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    <WalletHome.Master>
+    <ContentPage Title="Panel">
+      <StackLayout BackgroundColor="Orange" VerticalOptions="FillAndExpand">
+        <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None" ItemsSource="{Binding ListViewIS}" >
+          <ListView.Behaviors>
+            <behaviors:ListViewBehavior Command="{Binding ListViewItemSelected}"/>
+          </ListView.Behaviors>
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ImageCell Text="{Binding ListViewText}" ImageSource="{Binding ListViewIconSource}" />
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </ContentPage>
+  </WalletHome.Master>
+  <WalletHome.Detail>
+    <local:DashboardPage />
+  </WalletHome.Detail>
 </ContentPage>

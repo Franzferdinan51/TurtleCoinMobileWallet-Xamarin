@@ -10,6 +10,7 @@ namespace TurtleWallet.Views
         {
             Content = new Label { Text = "Hello ContentView" };
         }
+
     }
 }
 

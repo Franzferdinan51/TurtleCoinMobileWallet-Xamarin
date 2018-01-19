@@ -1,8 +1,30 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="TurtleWallet.Views.LandingPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TurtleWallet.Views.LandingPage"
+    BackgroundImage="background.png">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20">
+            <Label
+                Text="Welcome to TurtleCoin Wallet"
+                XAlign="Center"
+                Margin="0,100,0,0"
+                TextColor="White"
+                Font="20" />
+            <Button
+                Text="SIGN IN"
+                TextColor="{StaticResource Primary}"
+                BackgroundColor="White"
+                Margin="50,200,50,0"
+                Font="Bold"
+                Clicked="SignInOnClick" />
+            <Button
+                Text="Create a profile"
+                TextColor="White"
+                BorderColor="Transparent"
+                BackgroundColor="Transparent" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

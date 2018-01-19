@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace TurtleWallet.Views
@@ -10,6 +8,25 @@ namespace TurtleWallet.Views
         public LandingPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        public RootPage GetRootPage()
+        {
+            Page menuPage = new MenuPage();
+            var NavigationPage = new NavigationPage(new DashboardPage());
+            var RootPage = new RootPage();
+            menuPage.Title = "Menu";
+            RootPage.Master = menuPage;
+            RootPage.Detail = NavigationPage;
+
+            return RootPage;
+        }
+
+        void SignInOnClick(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = GetRootPage();
         }
     }
 }

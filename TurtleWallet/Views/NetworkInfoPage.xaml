@@ -1,8 +1,43 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="TurtleWallet.Views.NetworkInfoPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TurtleWallet.Views.NetworkInfoPage"
+    Title="Network Info">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20">
+            <Label
+                Text="Height" />
+            <Label
+                x:Name="Height"
+                Text="loading..."
+                TextColor="{StaticResource Primary}"
+                FontSize="16" />
+            <Label
+                Text="Hash Rate"
+                Margin="0,10,0,0" />
+            <Label
+                x:Name="HashRate"
+                Text="loading..."
+                TextColor="{StaticResource Primary}"
+                FontSize="16" />
+            <Label
+                Text="Supply"
+                Margin="0,10,0,0" />
+            <Label
+                x:Name="Supply"
+                Text="loading..."
+                TextColor="{StaticResource Primary}"
+                FontSize="16" />
+            <Label
+                Text="Difficulty"
+                Margin="0,10,0,0" />
+            <Label
+                x:Name="Difficulty"
+                Text="loading..."
+                TextColor="{StaticResource Primary}"
+                FontSize="16" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

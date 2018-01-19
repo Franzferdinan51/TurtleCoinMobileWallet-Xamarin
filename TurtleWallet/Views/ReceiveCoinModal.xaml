@@ -1,8 +1,35 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="TurtleWallet.Views.ReceiveCoinModal">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TurtleWallet.Views.ReceiveCoinModal">
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            Margin="20">
+            <Label
+                Text="×"
+                FontSize="30"
+                Margin="0,0,0,80"
+                TextColor="{StaticResource Primary}" />
+            <Label
+                Text="Tap on addresss to copy it to clipboard or click on icon to share QR code."
+                XAlign="Center"
+                FontSize="16"
+                TextColor="{StaticResource DarkTextColor}" />
+            <Label
+                Text="Receive TurtleCoin Address"
+                XAlign="Center"
+                Margin="0,30,0,0" />
+            <Label
+                Text="TRTLabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+                TextColor="{StaticResource Primary}"
+                Margin="0,0,0,10"
+                XAlign="Center" />
+            <Image
+                Source="turtlecoin_qr.png"
+                WidthRequest="150"
+                HeightRequest="150" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

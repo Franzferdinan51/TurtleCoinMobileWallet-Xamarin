@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 
 using Xamarin.Forms;
 
 namespace TurtleWallet.Views
 {
-    public partial class Dashboard : ContentPage
+    public partial class DashboardPage : ContentPage
     {
-        public Dashboard()
+        public DashboardPage()
         {
             InitializeComponent();
+        }
+
+        async void WalletOnClick(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new WalletPage());
         }
     }
 }

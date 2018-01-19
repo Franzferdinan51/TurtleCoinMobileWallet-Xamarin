@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace TurtleWallet.Views
 {
-    public partial class SendTurtleModal : ContentPage
+    public partial class SendCoinModal : ContentPage
     {
-        public SendTurtleModal()
+        public SendCoinModal()
         {
             InitializeComponent();
         }

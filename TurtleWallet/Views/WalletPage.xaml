@@ -1,8 +1,107 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="TurtleWallet.Views.WalletPage">
-	<ContentPage.Content>
-	</ContentPage.Content>
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TurtleWallet.Views.WalletPage"
+    Title="Wallet">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout
+                BackgroundColor="{StaticResource DarkTextColor}"
+                Padding="20">
+                <Label
+                    Text="12.3MM TRTL"
+                    XAlign="Center"
+                    YAlign="End"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="16"
+                    TextColor="White"
+                    Margin="0,0,0,0" />
+                <Label
+                    Text="B4.5MM"
+                    XAlign="Center"
+                    YAlign="End"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="16"
+                    TextColor="White" />
+                <Label
+                    Text="TRTLabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+                    FontSize="11"
+                    TextColor="{StaticResource LightTextColor}"
+                    Margin="0,40,0,20" />
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Button
+                        Text="Send"
+                        Margin="0,0,5,0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        BorderRadius="24"
+                        Clicked="SendOnClick"/>
+                    <Button
+                        Text="Receive"
+                        Margin="5,0,0,0"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HorizontalOptions="FillAndExpand"
+                        BorderRadius="24"
+                        Clicked="ReceiveOnClick"/>
+                </StackLayout>
+            </StackLayout>
+            <Label
+                Text="Transactions"
+                Font="Bold, 16"
+                Margin="20,20,0,10" 
+                TextColor="{StaticResource DarkTextColor}" />
+            <ListView
+                x:Name="TransactionList"
+                VerticalOptions="FillAndExpand"
+                CachingStrategy="RecycleElement"
+                SeparatorVisibility="Default"
+                Margin="20,0,20,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Padding="0">
+                                <StackLayout
+                                    Padding="0"
+                                    HorizontalOptions="FillAndExpand">
+                                    <Label
+                                        Text="{Binding TransactionTypeDisplay}"
+                                        LineBreakMode="NoWrap"
+                                        YAlign="End"
+                                        Style="{DynamicResource ListItemTextStyle}"
+                                        FontSize="10" />
+                                    <Label
+                                        Text="{Binding PublicKey}"
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="16" />
+                                </StackLayout>
+                                <StackLayout
+                                    Padding="1">
+                                    <Label
+                                        Text="{Binding AmountDisplay}"
+                                        LineBreakMode="NoWrap"
+                                        XAlign="End"
+                                        Style="{DynamicResource ListItemTextStyle}"
+                                        FontSize="16" />
+                                    <Label
+                                        Text="{Binding Date}"
+                                        LineBreakMode="NoWrap"
+                                        VerticalTextAlignment="End"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="10" />
+                                </StackLayout>
+                                <Label Text="{Binding TransactionArrow}" YAlign="Center" TextColor="Red"  />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

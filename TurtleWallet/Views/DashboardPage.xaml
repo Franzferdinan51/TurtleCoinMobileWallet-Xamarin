@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="TurtleWallet.Views.Dashboard">
-	<ContentPage.Content>
-          <Label Text="Hi!" VerticalOptions="Center" HorizontalOptions="Center" />
-	</ContentPage.Content>
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TurtleWallet.Views.DashboardPage"
+    Title="Mr.Turtle's Dashboard">
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            Margin="16">
+            <Label
+                Text="Total Balance"
+                Font="14"
+                TextColor="{StaticResource MediumGrayTextColor}" />
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="12.3MM TRTL"
+                    Font="Bold,18"
+                    Margin="0,0,10,10"
+                    TextColor="{StaticResource DarkTextColor}" />
+                <Label
+                    Text="B 123,456.78"
+                    FontSize="14"
+                    YAlign="End"
+                    Margin="0,0,10,10"
+                    TextColor="{StaticResource MediumGrayTextColor}" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Spacing="20">
+                <Button
+                    Text="12.3MM TRTL"
+                    TextColor="White"
+                    WidthRequest="250"
+                    HeightRequest="100"
+                    Clicked="WalletOnClick"
+                    BackgroundColor="{StaticResource Primary}" />
+                <Button
+                    Text="1234 TRTL"
+                    TextColor="White"
+                    WidthRequest="250"
+                    HeightRequest="100"
+                    Clicked="WalletOnClick"
+                    BackgroundColor="{StaticResource Primary}" />
+            </StackLayout>
+            <Label
+                Text="Market Data"
+                Font="Bold,16"
+                TextColor="{StaticResource DarkTextColor}"
+                Margin="0,30,0,0" />
+            <Image
+                Source="market_data_mockup" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
