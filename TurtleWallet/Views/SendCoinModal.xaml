@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="TurtleWallet.Views.SendTurtleModal">
+	<ContentPage.Content>
+        <StackLayout>
+            <Label Text="Address" TextColor="{StaticResource LightTextColor}"/>
+            <Entry Placeholder="Address" />
+            <Label Text="TRTL" TextColor="{StaticResource LightTextColor}"/>
+            <Entry Placeholder="100" />
+            <Label Text="BTC" TextColor="{StaticResource LightTextColor}"/>
+            <Entry Placeholder="0.05" />
+
+
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
