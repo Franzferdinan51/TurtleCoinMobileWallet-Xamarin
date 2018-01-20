@@ -1,4 +1,15 @@
-﻿using System;
+﻿//----------------------------------------------------------------------------------------
+//
+// 	Originally from:
+// 	https://github.com/CaptainMeatloaf/TurtleBot/blob/master/Modules/DaemonModule.cs
+// 
+//
+// 	Modified on January 19, 2018
+//
+//-----------------------------------------------------------------------------------------
+
+
+using System;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
