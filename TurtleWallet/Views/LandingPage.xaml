@@ -10,14 +10,15 @@
             <Label
                 Text="Welcome to TurtleCoin Wallet"
                 XAlign="Center"
-                Margin="0,100,0,0"
+                Margin="0,80,0,0"
                 TextColor="White"
-                Font="20" />
+                Font="18" />
+            <Image Source="turtle_shield.png" />
             <Button
                 Text="SIGN IN"
                 TextColor="{StaticResource Primary}"
                 BackgroundColor="White"
-                Margin="50,200,50,0"
+                Margin="50,40,50,0"
                 Font="Bold"
                 Clicked="SignInOnClick" />
             <Button
